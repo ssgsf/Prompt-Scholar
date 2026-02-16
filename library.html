@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Library - PromptScholar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; color:inherit;">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">PromptScholar</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="library.html">Prompt Library</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="pricing.html" class="btn-nav">Get Premium</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="library-header">
+        <div class="container">
+            <h1>Prompt Library</h1>
+            <p>Browse 60+ expert-crafted prompts across all major subjects</p>
+        </div>
+    </section>
+
+    <section class="library-content">
+        <div class="container">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-subject="all">All Subjects</button>
+                <button class="filter-btn" data-subject="biology">🧬 Biology</button>
+                <button class="filter-btn" data-subject="psychology">🧠 Psychology</button>
+                <button class="filter-btn" data-subject="english">✍️ English</button>
+                <button class="filter-btn" data-subject="mathematics">📐 Math</button>
+                <button class="filter-btn" data-subject="business">💼 Business</button>
+                <button class="filter-btn" data-subject="history">🏛️ History</button>
+            </div>
+
+            <div id="promptsContainer" class="prompts-grid">
+                <!-- Prompts will be loaded here by JavaScript -->
+            </div>
+
+            <div id="upgradePrompt" class="upgrade-banner" style="display:none; margin-top: 3rem; text-align: center; padding: 3rem; background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; border-radius: 1rem;">
+                <h3 style="font-size: 2rem; margin-bottom: 1rem;">Want Access to All Prompts?</h3>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.95;">Upgrade to Premium for unlimited access to 60+ prompts across all subjects</p>
+                <a href="pricing.html" class="btn btn-primary btn-large" style="background: white; color: #1e40af;">Upgrade Now - $4.99/month</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt Detail Modal -->
+    <div id="promptModal" class="modal" style="display:none;">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modalContent">
+                <!-- Prompt details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📚</span>
+                        <span class="logo-text">PromptScholar</span>
+                    </div>
+                    <p class="footer-description">Ethical AI study prompts for college students.</p>
+                    <p class="footer-copyright">© 2026 PromptScholar. All rights reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="library.html">Prompt Library</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulated user status - in production, this would check actual authentication
+        const isPremium = false; // Change to true to test premium view
+        const freePromptLimit = 10;
+
+        let allPrompts = [];
+        let currentFilter = 'all';
+
+        // Load prompts from JSON file
+        async function loadPrompts() {
+            try {
+                const response = await fetch('prompts-data.json');
+                const data = await response.json();
+                
+                // Flatten all prompts into single array with subject info
+                allPrompts = [];
+                Object.keys(data).forEach(subject => {
+                    data[subject].forEach(prompt => {
+                        allPrompts.push({...prompt, subject: subject});
+                    });
+                });
+                
+                displayPrompts();
+            } catch (error) {
+                console.error('Error loading prompts:', error);
+                document.getElementById('promptsContainer').innerHTML = 
+                    '<p style="text-align:center; padding:2rem;">Error loading prompts. Please refresh the page.</p>';
+            }
+        }
+
+        // Display prompts based on current filter
+        function displayPrompts() {
+            const container = document.getElementById('promptsContainer');
+            const filtered = currentFilter === 'all' 
+                ? allPrompts 
+                : allPrompts.filter(p => p.subject === currentFilter);
+            
+            // Show only limited prompts for free users
+            const promptsToShow = isPremium ? filtered : filtered.slice(0, freePromptLimit);
+            
+            if (promptsToShow.length === 0) {
+                container.innerHTML = '<p style="text-align:center; padding:2rem;">No prompts found for this subject.</p>';
+                return;
+            }
+
+            container.innerHTML = promptsToShow.map((prompt, index) => `
+                <div class="prompt-card" data-locked="${!isPremium && index >= freePromptLimit}">
+                    <div class="prompt-category">${prompt.category}</div>
+                    <h3 class="prompt-title">${prompt.title}</h3>
+                    <p class="prompt-description">${prompt.description}</p>
+                    <div class="prompt-meta">
+                        <span class="difficulty-badge difficulty-${prompt.difficulty.toLowerCase()}">${prompt.difficulty}</span>
+                        <button class="view-prompt-btn" onclick="viewPrompt('${prompt.id}')">
+                            View Prompt →
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
+            // Show upgrade banner if not premium and viewing all prompts
+            document.getElementById('upgradePrompt').style.display = 
+                (!isPremium && filtered.length > freePromptLimit) ? 'block' : 'none';
+        }
+
+        // View individual prompt
+        function viewPrompt(promptId) {
+            const prompt = allPrompts.find(p => p.id === promptId);
+            if (!prompt) return;
+
+            const modal = document.getElementById('promptModal');
+            const content = document.getElementById('modalContent');
+            
+            content.innerHTML = `
+                <div class="prompt-category" style="margin-bottom: 1rem;">${prompt.category}</div>
+                <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">${prompt.title}</h2>
+                <p style="color: var(--color-text-light); font-size: 1.125rem; margin-bottom: 2rem;">${prompt.description}</p>
+                
+                <div style="background: #f9fafb; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem; font-weight: 700;">The Prompt:</h4>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                        <pre style="white-space: pre-wrap; font-family: 'DM Sans', sans-serif; line-height: 1.7; margin: 0;">${prompt.prompt}</pre>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                    <button onclick="copyPrompt('${prompt.id}')" class="btn btn-primary" style="flex: 1;">
+                        📋 Copy Prompt
+                    </button>
+                    <button onclick="closeModal()" class="btn btn-secondary" style="flex: 1;">
+                        Close
+                    </button>
+                </div>
+
+                <div style="padding: 1rem; background: #fef3c7; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
+                    <p style="margin: 0; font-size: 0.938rem; color: #78350f;"><strong>💡 Pro Tip:</strong> Customize this prompt with your specific topic, course, or assignment details for best results!</p>
+                </div>
+            `;
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Copy prompt to clipboard
+        function copyPrompt(promptId) {
+            const prompt = allPrompts.find(p => p.id === promptId);
+            if (!prompt) return;
+
+            navigator.clipboard.writeText(prompt.prompt).then(() => {
+                alert('✅ Prompt copied to clipboard! Paste it into Claude, ChatGPT, or your preferred AI tool.');
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('promptModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.dataset.subject;
+                displayPrompts();
+            });
+        });
+
+        // Load prompts on page load
+        loadPrompts();
+    </script>
+
+    <style>
+        /* Modal styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            border-radius: 1rem;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f3f4f6;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: #e5e7eb;
+            transform: rotate(90deg);
+        }
+
+        .library-content {
+            padding: 3rem 0;
+            min-height: 60vh;
+        }
+
+        @media (max-width: 768px) {
+            .modal {
+                padding: 1rem;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

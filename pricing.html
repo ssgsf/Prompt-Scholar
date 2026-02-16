@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - PromptScholar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display:flex; align-items:center; gap:0.5rem;">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">PromptScholar</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="library.html">Prompt Library</a>
+                <a href="improve.html">Improve Prompt</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="#" class="btn-nav">Log In</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="pricing-header">
+                <h1>Simple, Transparent Pricing</h1>
+                <p>Start free. Upgrade anytime. Cancel anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="plans-grid">
+                <!-- Free Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Free</h3>
+                        <div class="plan-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="plan-description">Try PromptScholar risk-free</p>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>10 curated prompts</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>3 prompt improvements</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Browse all subjects</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Ethical use guide</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-secondary btn-large plan-cta">Get Started Free</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="plan-card plan-featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="plan-price">
+                            <span class="price-amount">$4.99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="plan-description">Everything you need to excel</p>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span><strong>Unlimited</strong> prompt library access</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span><strong>Unlimited</strong> prompt improvements</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>All 100+ prompts across 6 subjects</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>New prompts added monthly</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Priority email support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Cancel anytime</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-large plan-cta" id="checkoutButton">
+                        Start Premium Now
+                    </button>
+                    <p class="plan-guarantee">30-day money-back guarantee</p>
+                </div>
+
+                <!-- Annual Plan -->
+                <div class="plan-card">
+                    <div class="plan-badge plan-badge-success">Save 20%</div>
+                    <div class="plan-header">
+                        <h3>Annual</h3>
+                        <div class="plan-price">
+                            <span class="price-amount">$49</span>
+                            <span class="price-period">/year</span>
+                        </div>
+                        <p class="plan-description">Best value for committed students</p>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Everything in Premium</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span><strong>Save $10.88/year</strong></span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Priority feature requests</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Early access to new features</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary btn-large plan-cta" id="annualCheckoutButton">
+                        Get Annual Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Is this cheating?</h3>
+                    <p>No! PromptScholar is designed to help you <strong>learn</strong>, not cheat. Our prompts focus on understanding concepts, critical thinking, and developing your own ideas—not generating completed work.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What AI tools work with these prompts?</h3>
+                    <p>Our prompts are optimized for Claude and ChatGPT, but work with any AI assistant. We focus on teaching you universal principles of effective AI interaction.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I cancel anytime?</h3>
+                    <p>Absolutely! No long-term commitment. Cancel your subscription anytime from your account settings or by emailing us.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer refunds?</h3>
+                    <p>Yes! If you're not satisfied within 30 days of purchase, we'll refund your money, no questions asked.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How often are new prompts added?</h3>
+                    <p>Premium members get access to 20-30 new prompts every month across various subjects.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a student discount?</h3>
+                    <p>Our pricing is already student-friendly at $4.99/month—less than a cup of coffee! We focus on keeping costs low for all students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Study Smarter?</h2>
+                <p>Join hundreds of students learning more effectively with AI</p>
+                <button class="btn btn-primary btn-large" id="ctaCheckoutButton">
+                    Start Premium - $4.99/month
+                </button>
+                <p class="cta-subtext">30-day money-back guarantee • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📚</span>
+                        <span class="logo-text">PromptScholar</span>
+                    </div>
+                    <p class="footer-description">Ethical AI study prompts for college students.</p>
+                    <p class="footer-copyright">© 2026 PromptScholar. All rights reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="library.html">Prompt Library</a></li>
+                        <li><a href="improve.html">Improve Prompt</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="ethical-use.html">Ethical Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p>Claude is a trademark of Anthropic, PBC. PromptScholar is not affiliated with or endorsed by Anthropic.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Stripe Integration
+        // REPLACE 'pk_test_...' with your actual Stripe publishable key
+        const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
+
+        // Handle checkout for monthly plan
+        document.getElementById('checkoutButton').addEventListener('click', function() {
+            // Replace with your Stripe Price ID for $4.99/month
+            stripe.redirectToCheckout({
+                lineItems: [{price: 'price_YOUR_PRICE_ID_HERE', quantity: 1}],
+                mode: 'subscription',
+                successUrl: window.location.protocol + '//yoursite.com/success.html',
+                cancelUrl: window.location.protocol + '//yoursite.com/pricing.html',
+            }).then(function(result) {
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            });
+        });
+
+        // Handle checkout for annual plan
+        document.getElementById('annualCheckoutButton').addEventListener('click', function() {
+            // Replace with your Stripe Price ID for $49/year
+            stripe.redirectToCheckout({
+                lineItems: [{price: 'price_YOUR_ANNUAL_PRICE_ID_HERE', quantity: 1}],
+                mode: 'subscription',
+                successUrl: window.location.protocol + '//yoursite.com/success.html',
+                cancelUrl: window.location.protocol + '//yoursite.com/pricing.html',
+            }).then(function(result) {
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            });
+        });
+
+        // CTA button
+        document.getElementById('ctaCheckoutButton').addEventListener('click', function() {
+            document.getElementById('checkoutButton').click();
+        });
+    </script>
+</body>
+</html>

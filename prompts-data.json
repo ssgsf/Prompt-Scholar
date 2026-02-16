@@ -1,0 +1,494 @@
+{
+  "biology": [
+    {
+      "id": "bio_1",
+      "title": "Cell Structure Deep Dive",
+      "description": "Break down cellular components and their functions",
+      "prompt": "I'm studying cell biology and need to understand [specific organelle/cell component]. Help me by:\n1. Explaining its primary function in simple terms\n2. Describing how it interacts with other organelles\n3. Providing a real-world analogy that makes it memorable\n4. Asking me questions to test my understanding\n\nPlease guide me through the concept rather than just giving me facts to memorize.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bio_2",
+      "title": "Genetics Problem Solving",
+      "description": "Work through genetic crosses and inheritance patterns",
+      "prompt": "I have a genetics problem about [topic: Mendelian inheritance/pedigrees/etc]. Instead of solving it for me, help me understand the approach by:\n1. Breaking down what information the problem gives me\n2. Explaining what genetic principles apply here\n3. Guiding me through the steps I should take\n4. Checking my logic at each step\n\nAsk me to work through each step before moving to the next.",
+      "category": "Problem Solving",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bio_3",
+      "title": "Photosynthesis Process Breakdown",
+      "description": "Understand light and dark reactions step by step",
+      "prompt": "I'm studying photosynthesis and need to understand [light reactions/Calvin cycle]. Break down this complex process by:\n1. Explaining each stage's inputs and outputs\n2. Describing where each stage occurs in the chloroplast\n3. Connecting the stages to show how they work together\n4. Using an analogy to help me remember the flow\n\nAsk me questions to ensure I understand the connections between stages.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bio_4",
+      "title": "DNA to Protein Pathway",
+      "description": "Follow the central dogma step by step",
+      "prompt": "I need to trace how DNA becomes a protein, focusing on [transcription/translation/RNA processing]. Walk me through by:\n1. Explaining each major step's purpose\n2. Identifying the key molecules involved at each stage\n3. Describing how errors are prevented or corrected\n4. Asking me to explain what happens if specific steps fail\n\nHelp me understand the flow and logic, not just memorize terminology.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bio_5",
+      "title": "Ecology Systems Analysis",
+      "description": "Understand ecosystem relationships and energy flow",
+      "prompt": "I need to understand the ecological concept of [food webs/nutrient cycles/population dynamics]. Help me learn by:\n1. Explaining the core concept with a specific example ecosystem\n2. Showing how different factors are interconnected\n3. Describing what happens when one factor changes\n4. Connecting this to current environmental issues\n\nUse questions to make sure I'm thinking critically about the relationships.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bio_6",
+      "title": "Evolution Evidence Analysis",
+      "description": "Evaluate different types of evolutionary evidence",
+      "prompt": "I need to understand the evidence for evolution from [fossils/comparative anatomy/DNA/biogeography]. Help me think critically by:\n1. Explaining what this type of evidence demonstrates\n2. Discussing its strengths and limitations\n3. Connecting it to evolutionary theory principles\n4. Asking me how different evidence types support each other\n\nBuild my understanding of scientific reasoning and evidence evaluation.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bio_7",
+      "title": "Body Systems Integration",
+      "description": "Understand how biological systems work together",
+      "prompt": "I'm learning about [body system: circulatory/respiratory/nervous/etc] and how it interacts with other systems. Help me see the big picture by:\n1. Explaining the system's primary functions\n2. Describing how it depends on and supports other systems\n3. Showing what happens when this system malfunctions\n4. Using a specific example of multiple systems working together\n\nHelp me understand the body as an integrated whole, not isolated parts.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bio_8",
+      "title": "Enzyme Function and Kinetics",
+      "description": "Grasp enzyme mechanisms and regulation",
+      "prompt": "I need to understand how enzymes work, focusing on [enzyme specificity/regulation/inhibition]. Guide my learning by:\n1. Explaining the concept with a clear mechanism\n2. Using a metaphor or model to make it concrete and memorable\n3. Discussing factors that affect enzyme activity\n4. Testing my understanding with hypothetical scenarios\n\nMake enzyme function intuitive and logical, not just a list of facts to memorize.",
+      "category": "Understanding Concepts",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bio_9",
+      "title": "Immune System Response",
+      "description": "Understand innate and adaptive immunity",
+      "prompt": "I'm studying the immune system's response to [specific pathogen/vaccine/transplant]. Break down my understanding by:\n1. Distinguishing between innate and adaptive immune responses\n2. Explaining the timeline of immune system activation\n3. Describing specific cell types and their roles in the response\n4. Connecting this to real-world health scenarios or applications\n\nMake immunology less overwhelming and more logical by showing the system's strategy.",
+      "category": "Understanding Concepts",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bio_10",
+      "title": "Experimental Design in Biology",
+      "description": "Design scientifically sound biological experiments",
+      "prompt": "I need to design an experiment to test [biological hypothesis]. Guide me through scientific thinking by:\n1. Helping me identify variables (independent, dependent, controlled)\n2. Determining appropriate experimental and control groups\n3. Discussing potential confounding factors and how to minimize them\n4. Explaining how to interpret different possible results\n\nTeach me to think like a biologist designing rigorous research.",
+      "category": "Problem Solving",
+      "difficulty": "Advanced"
+    }
+  ],
+  "psychology": [
+    {
+      "id": "psy_1",
+      "title": "Theory Comparison Framework",
+      "description": "Compare and contrast psychological theories",
+      "prompt": "I'm studying [Theory A] and [Theory B] in psychology. Help me understand both by:\n1. Explaining each theory's main principles separately and clearly\n2. Identifying their key similarities and differences\n3. Providing concrete examples where each theory best applies\n4. Asking me to identify which theory better explains specific scenarios\n\nGuide me to think critically about when and why each theory is most useful.",
+      "category": "Understanding Concepts",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "psy_2",
+      "title": "Research Methods Analysis",
+      "description": "Evaluate study design and methodology",
+      "prompt": "I need to analyze a psychology research study about [topic]. Help me think like a researcher by:\n1. Identifying the research question and hypothesis\n2. Evaluating whether the methodology appropriately tests the hypothesis\n3. Discussing potential confounds, biases, or limitations\n4. Suggesting how the study design could be improved\n\nAsk me questions that develop my critical thinking about research design and validity.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "psy_3",
+      "title": "Brain Structure and Behavior",
+      "description": "Connect brain regions to psychological functions",
+      "prompt": "I'm learning about [brain region: hippocampus/amygdala/prefrontal cortex/etc] and its functions. Help me understand by:\n1. Explaining its role in everyday behavior and cognition\n2. Describing what happens when it's damaged or dysfunctional\n3. Connecting it to psychological concepts I've already learned\n4. Using memorable examples or famous case studies\n\nMake neuropsychology relevant, concrete, and memorable.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "psy_4",
+      "title": "Developmental Stage Analysis",
+      "description": "Understand cognitive and social development theories",
+      "prompt": "I'm studying [Piaget/Erikson/Vygotsky]'s theory for [age group/developmental stage]. Deepen my understanding by:\n1. Explaining key characteristics and milestones of this stage\n2. Providing concrete, observable examples of stage-appropriate behavior\n3. Discussing how individual differences appear within the stage\n4. Asking me to identify the stage in real-world scenarios\n\nConnect developmental theory to actual, observable behavior patterns.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "psy_5",
+      "title": "Psychological Disorder Understanding",
+      "description": "Learn about mental health conditions ethically",
+      "prompt": "I need to understand [psychological disorder] for my abnormal psychology class. Help me learn sensitively and accurately by:\n1. Explaining diagnostic criteria in everyday language\n2. Discussing biological, psychological, and social contributing factors\n3. Describing evidence-based treatments and their effectiveness\n4. Addressing common misconceptions or stigma\n\nBuild my understanding while maintaining respect and sensitivity for those affected.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "psy_6",
+      "title": "Statistical Interpretation",
+      "description": "Understand psychological research statistics",
+      "prompt": "I'm confused about [statistical concept: p-value/effect size/correlation vs causation/etc] in psychology research. Help me understand by:\n1. Explaining in plain language what the statistic actually tells us\n2. Discussing what it doesn't tell us and its limitations\n3. Using a concrete research example to illustrate\n4. Testing my interpretation of specific research results\n\nMake statistics meaningful for understanding and evaluating psychological research.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "psy_7",
+      "title": "Social Psychology in Action",
+      "description": "Understand how social factors influence behavior",
+      "prompt": "I'm learning about [social influence/attribution/prejudice/conformity/etc]. Help me see psychological principles in action by:\n1. Explaining the core psychological concept and mechanism\n2. Describing classic research studies that demonstrate it\n3. Identifying current examples in society, media, or politics\n4. Asking me to recognize it in my own experiences and observations\n\nMake social psychology personally relevant and observable in daily life.",
+      "category": "Application",
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "psy_8",
+      "title": "Learning Theory Application",
+      "description": "Apply conditioning and learning principles",
+      "prompt": "I need to apply [classical conditioning/operant conditioning/observational learning] to [specific situation or behavior]. Guide my application by:\n1. Helping me identify the key components (stimuli, responses, reinforcement, etc)\n2. Explaining how the learning principle predicts behavior\n3. Discussing how to modify or shape the behavior using this theory\n4. Asking me to analyze similar scenarios using the same principle\n\nBridge abstract learning theory to practical behavioral understanding and change.",
+      "category": "Application",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "psy_9",
+      "title": "Memory and Cognition",
+      "description": "Understand how memory works and fails",
+      "prompt": "I'm studying memory processes: [encoding/storage/retrieval/forgetting]. Improve my understanding by:\n1. Explaining the cognitive processes and brain mechanisms involved\n2. Describing factors that enhance or impair memory at each stage\n3. Connecting this knowledge to effective study strategies\n4. Testing my understanding with examples and applications\n\nMake cognitive psychology practically useful for improving my own learning.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "psy_10",
+      "title": "Real-Life Application",
+      "description": "Connect psychological concepts to everyday situations",
+      "prompt": "I learned about [psychological concept: cognitive dissonance/confirmation bias/etc] in class and want to understand its real-world applications. Help me by:\n1. Explaining the concept in everyday, non-technical language\n2. Providing 3 diverse, concrete examples from daily life\n3. Discussing how understanding this concept could improve decision-making\n4. Asking me to identify and analyze this concept in my own experiences\n\nHelp me see psychology operating in the world around me constantly.",
+      "category": "Application",
+      "difficulty": "Beginner"
+    }
+  ],
+  "english": [
+    {
+      "id": "eng_1",
+      "title": "Thesis Development",
+      "description": "Craft a strong, arguable thesis statement",
+      "prompt": "I need to develop a thesis statement for my essay on [topic]. Instead of writing it for me, help me create one by:\n1. Asking questions to clarify what specific argument I want to make\n2. Ensuring my thesis is specific, debatable, and not just a fact\n3. Checking that it sets up my paper's structure and direction\n4. Suggesting how to strengthen any weak or vague points\n\nAsk me probing questions that push me to sharpen my thinking and argument.",
+      "category": "Writing Process",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "eng_2",
+      "title": "Literary Analysis Framework",
+      "description": "Analyze themes, symbols, and literary devices",
+      "prompt": "I'm analyzing [literary work] and focusing on [theme/symbol/literary device]. Guide my analysis by:\n1. Asking what I notice about this element throughout the text\n2. Helping me connect specific passages and quotes to larger meaning\n3. Encouraging me to explore why the author made these specific choices\n4. Questioning my interpretations to push deeper analysis\n\nHelp me develop my own original insights rather than telling me what the text means.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "eng_3",
+      "title": "Argument Structure Review",
+      "description": "Strengthen essay organization and logical flow",
+      "prompt": "I've drafted an essay on [topic] and need to improve its structure and flow. Help me by:\n1. Reviewing my outline or main points for logical progression\n2. Identifying where transitions between ideas are weak or missing\n3. Checking if each paragraph clearly supports my thesis\n4. Suggesting how to reorder content for maximum persuasive impact\n\nAsk me to explain my reasoning for the current structure before suggesting changes.",
+      "category": "Revision",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "eng_4",
+      "title": "Evidence Integration",
+      "description": "Effectively incorporate and analyze textual evidence",
+      "prompt": "I need help integrating evidence from [text/source] into my essay on [topic]. Guide me in scholarly writing by:\n1. Helping me select the most relevant and powerful quotes\n2. Teaching me to introduce quotes smoothly with context\n3. Showing me how to analyze evidence, not just present it\n4. Ensuring my voice remains central, with quotes supporting my argument\n\nHelp me master the 'quote sandwich': introduce, quote, analyze and connect.",
+      "category": "Writing Process",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "eng_5",
+      "title": "Rhetorical Analysis",
+      "description": "Analyze how authors persuade audiences",
+      "prompt": "I need to analyze the rhetorical strategies in [speech/essay/article] by [author]. Help me think rhetorically by:\n1. Identifying the author's purpose, audience, and context\n2. Analyzing how ethos, pathos, and logos are employed\n3. Examining specific stylistic and structural choices\n4. Evaluating the overall effectiveness of the rhetoric\n\nAsk me questions that make me see HOW the author constructs their argument.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "eng_6",
+      "title": "Character Analysis",
+      "description": "Develop complex understanding of literary characters",
+      "prompt": "I'm analyzing [character] from [literary work]. Deepen my character analysis by:\n1. Asking what the character's actions reveal about their motivations\n2. Exploring how the character changes or stays static\n3. Analyzing relationships with other characters\n4. Considering what the character represents thematically\n\nGuide me beyond surface-level description to psychological and thematic depth.",
+      "category": "Critical Analysis",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "eng_7",
+      "title": "Comparative Analysis",
+      "description": "Compare and contrast literary works or elements",
+      "prompt": "I need to compare [Text A] and [Text B] focusing on [theme/style/character/etc]. Structure my comparative analysis by:\n1. Identifying meaningful points of comparison (not just surface differences)\n2. Organizing: should I discuss texts separately or point-by-point?\n3. Ensuring I analyze WHY differences and similarities matter\n4. Developing a thesis about what the comparison reveals\n\nHelp me create analysis that goes deeper than listing similarities and differences.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "eng_8",
+      "title": "Close Reading Practice",
+      "description": "Analyze specific passages in detail",
+      "prompt": "I need to do a close reading of this passage from [work]: [paste short passage]. Guide my close reading by:\n1. Asking what I notice about word choice, imagery, and sound\n2. Helping me analyze how form and content work together\n3. Connecting this passage to larger themes in the work\n4. Questioning what makes this passage significant or revealing\n\nTeach me to read like a literary scholar, attending to every detail's purpose.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "eng_9",
+      "title": "Introduction and Conclusion",
+      "description": "Craft compelling essay beginnings and endings",
+      "prompt": "I'm working on the [introduction/conclusion] for my essay on [topic]. Help me create a strong [intro/conclusion] by:\n1. Suggesting effective hooks or opening strategies that fit my topic\n2. Ensuring my introduction sets up my argument clearly\n3. Making my conclusion synthesize without just repeating\n4. Creating a lasting impression that reinforces my thesis\n\nHelp me avoid generic openings and endings that weaken strong essays.",
+      "category": "Writing Process",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "eng_10",
+      "title": "Style and Voice",
+      "description": "Develop appropriate academic tone and style",
+      "prompt": "I want to improve my writing style and voice for [type of essay: academic/personal/creative]. Help me refine my style by:\n1. Identifying where my language is too informal, vague, or repetitive\n2. Suggesting how to vary sentence structure for better flow\n3. Helping me maintain an appropriate tone for my audience\n4. Strengthening word choice without making it overly complex\n\nGuide me to develop a confident, clear, and engaging academic voice.",
+      "category": "Revision",
+      "difficulty": "Intermediate"
+    }
+  ],
+  "mathematics": [
+    {
+      "id": "math_1",
+      "title": "Problem-Solving Strategy",
+      "description": "Develop systematic approach to math problems",
+      "prompt": "I'm stuck on a [calculus/algebra/statistics] problem about [concept]. Rather than showing me the solution, help me develop problem-solving skills by:\n1. Asking what I understand about the problem and what's confusing\n2. Helping me identify what mathematical principles or formulas apply\n3. Breaking the problem into smaller, manageable steps\n4. Guiding me through each step with questions, not answers\n\nWait for my attempt at each step before providing hints for the next one.",
+      "category": "Problem Solving",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "math_2",
+      "title": "Concept Understanding",
+      "description": "Build intuition for mathematical concepts",
+      "prompt": "I'm learning about [mathematical concept: derivative/integral/matrix/etc] but don't intuitively understand it yet. Help me build genuine understanding by:\n1. Explaining the concept using a visual representation or real-world analogy\n2. Showing how it connects to mathematical concepts I already know\n3. Providing a simple, clear example with step-by-step reasoning\n4. Asking me questions to check and deepen my comprehension\n\nFocus on the 'why' and intuition behind the concept, not just procedural 'how'.",
+      "category": "Understanding Concepts",
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "math_3",
+      "title": "Error Analysis",
+      "description": "Identify and learn from mathematical mistakes",
+      "prompt": "I attempted this problem: [describe problem and show your work]. I got it wrong but don't understand why. Help me learn from this mistake by:\n1. Asking me to walk through and explain each step of my reasoning\n2. Helping me identify exactly where my logic or calculation breaks down\n3. Explaining the correct mathematical principle without solving it for me\n4. Letting me attempt the correction with the new understanding\n\nThe goal is for me to find and understand my own mistake, building metacognition.",
+      "category": "Error Correction",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "math_4",
+      "title": "Word Problem Translation",
+      "description": "Convert word problems into mathematical expressions",
+      "prompt": "I have this word problem: [state problem]. I'm struggling to translate it into math. Help me develop translation skills by:\n1. Asking me to identify what the problem is asking for\n2. Helping me define variables and what they represent\n3. Guiding me to express relationships as equations\n4. Checking that my mathematical translation captures the problem correctly\n\nTeach me to systematically approach word problems, not just this one instance.",
+      "category": "Problem Solving",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "math_5",
+      "title": "Proof Strategy",
+      "description": "Develop mathematical proof-writing skills",
+      "prompt": "I need to prove [mathematical statement]. Guide my proof development by:\n1. Asking what I know and what I need to show\n2. Suggesting what type of proof might work (direct, contradiction, induction, etc)\n3. Helping me identify key steps and logical connections\n4. Checking my reasoning at each stage for validity\n\nHelp me think like a mathematician constructing rigorous logical arguments.",
+      "category": "Problem Solving",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "math_6",
+      "title": "Graphical Interpretation",
+      "description": "Connect equations to graphs and vice versa",
+      "prompt": "I'm working with [function/equation] and need to understand its graph, or I have a graph and need to understand the equation. Help me connect algebraic and visual representations by:\n1. Explaining how key features of the equation appear in the graph\n2. Describing how changes in the equation affect the graph's shape\n3. Using the graph to understand function behavior\n4. Testing my understanding with variations\n\nBuild my ability to move fluidly between algebraic and graphical thinking.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "math_7",
+      "title": "Statistical Thinking",
+      "description": "Develop statistical reasoning and interpretation",
+      "prompt": "I'm working with statistical data or concepts: [describe situation]. Help me think statistically by:\n1. Clarifying what the statistical measures actually tell us\n2. Distinguishing between correlation and causation\n3. Identifying potential sources of bias or confounding\n4. Interpreting results in context with appropriate uncertainty\n\nTeach me to think critically about data and avoid common statistical fallacies.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "math_8",
+      "title": "Optimization Problems",
+      "description": "Solve max/min problems using calculus",
+      "prompt": "I have an optimization problem: [describe problem]. Help me solve it using calculus by:\n1. Asking me to identify what I'm trying to maximize or minimize\n2. Guiding me to set up the objective function and constraints\n3. Walking me through finding critical points\n4. Helping me verify that my answer makes sense in context\n\nDevelop my systematic approach to optimization rather than just solving this one problem.",
+      "category": "Problem Solving",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "math_9",
+      "title": "Algebra Fundamentals",
+      "description": "Master algebraic manipulation and solving",
+      "prompt": "I'm working on [algebraic concept: factoring/solving equations/simplifying expressions]. Strengthen my algebraic skills by:\n1. Explaining the underlying principle and when to use this technique\n2. Breaking down the procedure into clear steps\n3. Showing me how to check if my answer is correct\n4. Giving me a similar problem to try independently\n\nBuild my confidence and competence in fundamental algebra.",
+      "category": "Understanding Concepts",
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "math_10",
+      "title": "Application to Real World",
+      "description": "Connect abstract math to practical problems",
+      "prompt": "I'm learning [mathematical concept] but don't see how it's useful. Help me understand its applications by:\n1. Explaining what real-world problems this concept solves\n2. Providing concrete examples from science, engineering, or daily life\n3. Showing me how professionals use this mathematics\n4. Helping me recognize where I might encounter this concept\n\nMake abstract mathematics feel relevant and purposeful, not arbitrary.",
+      "category": "Application",
+      "difficulty": "Beginner"
+    }
+  ],
+  "business": [
+    {
+      "id": "bus_1",
+      "title": "Case Study Analysis",
+      "description": "Analyze business scenarios and strategic decisions",
+      "prompt": "I'm analyzing a business case about [company/situation/decision]. Guide my business analysis by:\n1. Helping me identify the core business problem or opportunity\n2. Asking about relevant economic principles, theories, or frameworks\n3. Encouraging me to consider multiple stakeholder perspectives\n4. Questioning the pros, cons, and trade-offs of different solutions\n\nPush me to think beyond obvious answers and consider strategic implications.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bus_2",
+      "title": "Financial Concept Application",
+      "description": "Apply financial principles to business scenarios",
+      "prompt": "I'm learning about [financial concept: NPV/IRR/financial ratios/etc] and need to understand its practical business use. Help me by:\n1. Explaining when and why businesses use this concept in decision-making\n2. Walking through a realistic business example step-by-step\n3. Discussing what the results tell us about business health or decisions\n4. Asking me to interpret similar scenarios using this concept\n\nConnect the mathematical calculations to real business strategy and judgment.",
+      "category": "Application",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bus_3",
+      "title": "Marketing Strategy Development",
+      "description": "Develop and evaluate marketing approaches",
+      "prompt": "I need to develop a marketing strategy for [product/service/company]. Guide my strategic marketing thinking by:\n1. Asking probing questions about the target market and their needs\n2. Helping me analyze competitive positioning and differentiation\n3. Questioning my assumptions about customer behavior and preferences\n4. Suggesting how to measure strategy effectiveness and ROI\n\nHelp me think like a marketing strategist, not just complete an assignment.",
+      "category": "Strategy",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bus_4",
+      "title": "Supply and Demand Analysis",
+      "description": "Understand market equilibrium and shifts",
+      "prompt": "I'm analyzing supply and demand for [market/product], particularly [specific scenario: price change/tax/subsidy/etc]. Guide my economic analysis by:\n1. Asking me to identify factors affecting supply and demand\n2. Helping me predict how equilibrium price and quantity change\n3. Discussing real-world implications for businesses and consumers\n4. Testing my understanding with variations of the scenario\n\nBuild my economic intuition for how markets work and respond to changes.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bus_5",
+      "title": "Business Model Canvas",
+      "description": "Design and evaluate business models",
+      "prompt": "I'm working on a business model for [business idea/existing company]. Help me develop a strong business model by:\n1. Guiding me through each component: value proposition, customer segments, channels, etc\n2. Asking how components fit together and support each other\n3. Identifying potential weaknesses or gaps in the model\n4. Suggesting how to test assumptions before major investment\n\nTeach me to think systematically about how businesses create and capture value.",
+      "category": "Strategy",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bus_6",
+      "title": "Financial Statement Analysis",
+      "description": "Interpret income statements, balance sheets, and cash flow",
+      "prompt": "I need to analyze [company]'s financial statements, focusing on [profitability/liquidity/efficiency/etc]. Guide my financial analysis by:\n1. Helping me calculate relevant financial ratios\n2. Explaining what each ratio reveals about the company's health\n3. Comparing to industry benchmarks or competitors\n4. Identifying red flags or positive indicators\n\nTeach me to read financial statements like an analyst or investor.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bus_7",
+      "title": "Organizational Behavior",
+      "description": "Understand human behavior in business contexts",
+      "prompt": "I'm studying [organizational concept: motivation/leadership/team dynamics/culture]. Help me understand its business implications by:\n1. Explaining the psychological or sociological principles involved\n2. Providing concrete workplace examples of the concept in action\n3. Discussing how managers can apply this knowledge effectively\n4. Analyzing a specific organizational scenario using this concept\n\nConnect theory to practical management challenges and solutions.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "bus_8",
+      "title": "Competitive Analysis",
+      "description": "Analyze competitive landscape and strategy",
+      "prompt": "I need to analyze [company]'s competitive position using [Porter's Five Forces/SWOT/other framework]. Structure my analysis by:\n1. Guiding me through systematic application of the framework\n2. Asking about industry-specific factors and trends\n3. Helping me identify strategic implications and recommendations\n4. Evaluating the company's strategic options and trade-offs\n\nDevelop my ability to think strategically about competitive dynamics.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bus_9",
+      "title": "Operations Management",
+      "description": "Optimize business processes and efficiency",
+      "prompt": "I'm working on an operations problem involving [inventory/scheduling/quality control/supply chain]. Guide my operations thinking by:\n1. Helping me identify constraints and objectives\n2. Asking about trade-offs between competing priorities\n3. Suggesting quantitative approaches or models to use\n4. Discussing how to implement and measure improvements\n\nTeach me to think systematically about operational efficiency and effectiveness.",
+      "category": "Problem Solving",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "bus_10",
+      "title": "Entrepreneurial Thinking",
+      "description": "Evaluate business opportunities and risks",
+      "prompt": "I'm evaluating [business opportunity/startup idea]. Guide my entrepreneurial analysis by:\n1. Asking about market need, target customers, and value proposition\n2. Helping me assess competitive advantages and barriers to entry\n3. Discussing revenue models and unit economics\n4. Identifying key risks and how to test assumptions cheaply\n\nHelp me think like an entrepreneur evaluating opportunity, not just describing an idea.",
+      "category": "Strategy",
+      "difficulty": "Advanced"
+    }
+  ],
+  "history": [
+    {
+      "id": "hist_1",
+      "title": "Primary Source Analysis",
+      "description": "Critically examine historical documents",
+      "prompt": "I'm analyzing this primary source from [time period]: [brief description or excerpt]. Guide my historical thinking by:\n1. Asking what I notice about the author, audience, and historical context\n2. Helping me identify the author's bias, perspective, or agenda\n3. Connecting the source to broader historical themes or events\n4. Questioning what the source reveals and what it conceals or distorts\n\nTeach me to read sources like a historian: skeptically, contextually, analytically.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "hist_2",
+      "title": "Cause and Effect Analysis",
+      "description": "Understand complex historical causation",
+      "prompt": "I'm studying [historical event] and need to understand its causes and effects. Help me develop nuanced historical thinking by:\n1. Identifying multiple contributing factors, not just one simple cause\n2. Distinguishing between immediate triggers and long-term underlying causes\n3. Exploring both intended and unintended consequences\n4. Asking me to explain the connections and relationships between factors\n\nAvoid oversimplification—help me appreciate historical complexity and contingency.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "hist_3",
+      "title": "Historical Argument Building",
+      "description": "Construct evidence-based historical claims",
+      "prompt": "I need to argue [historical claim or thesis] in my paper. Help me build a strong historical argument by:\n1. Asking what primary and secondary source evidence supports my claim\n2. Identifying counterarguments or alternative interpretations I should address\n3. Ensuring I properly contextualize events and avoid presentism\n4. Strengthening my use and citation of historical sources\n\nGuide me to make claims and arguments that historians would consider rigorous.",
+      "category": "Writing Process",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "hist_4",
+      "title": "Historiography Understanding",
+      "description": "Analyze how historians have interpreted events",
+      "prompt": "I'm studying how historians have interpreted [historical event/figure/period]. Help me understand historiographical debates by:\n1. Explaining different schools of historical thought or interpretation\n2. Identifying how historians' contexts shaped their interpretations\n3. Analyzing what evidence different historians emphasized or ignored\n4. Considering which interpretation is most convincing and why\n\nHelp me see that history is interpretive, not just a collection of facts.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "hist_5",
+      "title": "Continuity and Change",
+      "description": "Identify what changed and what stayed the same",
+      "prompt": "I'm analyzing [historical period or event] focusing on continuity and change in [aspect: political/social/economic/cultural]. Guide my analysis by:\n1. Asking me to identify what changed significantly\n2. Helping me recognize what remained continuous or changed slowly\n3. Explaining why some things changed while others persisted\n4. Connecting patterns of change to larger historical processes\n\nDevelop my ability to see both transformation and persistence in history.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "hist_6",
+      "title": "Historical Comparison",
+      "description": "Compare events, movements, or societies",
+      "prompt": "I need to compare [historical event/society/movement A] with [B]. Structure my comparative historical analysis by:\n1. Identifying meaningful points of comparison beyond superficial similarities\n2. Explaining similarities and differences in terms of historical context\n3. Avoiding false equivalencies or anachronistic comparisons\n4. Drawing insights about larger historical patterns or processes\n\nHelp me compare thoughtfully and analytically, not just list similarities.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "hist_7",
+      "title": "Historical Empathy",
+      "description": "Understand past people on their own terms",
+      "prompt": "I'm trying to understand why [historical figure/group] did [action that seems strange/wrong today]. Help me develop historical empathy by:\n1. Asking about the historical context and worldview of the time\n2. Explaining how their actions made sense within their framework\n3. Avoiding both condemnation and justification based on modern values\n4. Balancing understanding their perspective with moral complexity\n\nTeach me to understand historical actors on their own terms without endorsing everything they did.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "hist_8",
+      "title": "Periodization Analysis",
+      "description": "Understand historical eras and turning points",
+      "prompt": "I'm studying why historians mark [year/event] as the beginning/end of [historical period]. Help me think about periodization by:\n1. Asking what significant changes occurred around this time\n2. Discussing what stayed the same despite the supposed break\n3. Considering whose perspective this periodization reflects\n4. Evaluating whether this is a useful way to divide history\n\nHelp me see that historical periods are interpretive tools, not natural divisions.",
+      "category": "Critical Analysis",
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "hist_9",
+      "title": "Social History Analysis",
+      "description": "Understand experiences of ordinary people",
+      "prompt": "I'm studying the experiences of [ordinary people/marginalized group] during [time period]. Guide my social history analysis by:\n1. Asking what sources reveal about daily life and experiences\n2. Helping me understand how social structures shaped people's lives\n3. Identifying agency and resistance alongside oppression\n4. Connecting individual experiences to broader social patterns\n\nHelp me do history 'from the bottom up,' not just studying elites and politics.",
+      "category": "Understanding Concepts",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": "hist_10",
+      "title": "Historical Context Building",
+      "description": "Situate events in proper historical context",
+      "prompt": "I need to provide historical context for [event/document/development]. Help me contextualize effectively by:\n1. Identifying relevant political, economic, social, and cultural background\n2. Explaining how this context shaped what happened\n3. Connecting to longer-term trends and shorter-term triggers\n4. Avoiding both too much and too little context for my purpose\n\nTeach me to provide context that illuminates without overwhelming.",
+      "category": "Writing Process",
+      "difficulty": "Intermediate"
+    }
+  ]
+}

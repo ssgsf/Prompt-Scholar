@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improve Your Prompt - PromptScholar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; color:inherit;">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">PromptScholar</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="library.html">Prompt Library</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="pricing.html" class="btn-nav">Get Premium</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="library-header">
+        <div class="container">
+            <h1>Improve Your Prompt</h1>
+            <p>Turn any prompt into an ethical learning tool</p>
+            <div style="margin-top: 1rem;">
+                <span id="improvementsRemaining" style="padding: 0.5rem 1rem; background: white; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; color: #1e40af;">
+                    3 free improvements remaining
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 3rem 0;">
+        <div class="container improve-tool">
+            <!-- Input Section -->
+            <div class="input-section">
+                <h2>Paste Your Prompt</h2>
+                <p style="color: #6b7280; margin-bottom: 1.5rem;">
+                    Enter any AI prompt below and we'll show you how to make it more effective and ethical for learning.
+                </p>
+                <textarea 
+                    id="userPrompt" 
+                    class="prompt-textarea" 
+                    placeholder="Example: Write my essay about climate change
+
+Or: Solve this math problem for me
+
+Or: Give me the answer to question 5"
+                ></textarea>
+                <button onclick="improvePrompt()" class="btn btn-primary btn-large improve-btn">
+                    ✨ Improve My Prompt
+                </button>
+            </div>
+
+            <!-- Result Section (hidden initially) -->
+            <div id="resultSection" class="result-section" style="display:none;">
+                <h2 style="margin-bottom: 1.5rem;">Analysis & Improvements</h2>
+                
+                <!-- Issues Found -->
+                <div id="issuesSection" class="issues-list">
+                    <!-- Issues will be inserted here -->
+                </div>
+
+                <!-- Comparison -->
+                <div class="comparison-grid">
+                    <div class="comparison-column original-column">
+                        <div class="column-label" style="color: #991b1b;">❌ Your Original Prompt</div>
+                        <div id="originalPrompt" class="prompt-text"></div>
+                    </div>
+                    <div class="comparison-column improved-column">
+                        <div class="column-label" style="color: #166534;">✅ Improved Version</div>
+                        <div id="improvedPrompt" class="prompt-text"></div>
+                        <button onclick="copyImprovedPrompt()" class="btn copy-btn">
+                            📋 Copy Improved Prompt
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Why This is Better -->
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-radius: 0.75rem; border-left: 4px solid #10b981;">
+                    <h4 style="color: #166534; margin-bottom: 1rem;">💡 Why This is Better:</h4>
+                    <ul id="whyBetterList" style="color: #166534; line-height: 1.8; margin-left: 1.5rem;">
+                        <!-- Benefits will be inserted here -->
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button onclick="resetTool()" class="btn btn-secondary">
+                        Try Another Prompt
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upgrade CTA (shown after 3 uses) -->
+            <div id="upgradeCTA" style="display:none; text-align: center; padding: 3rem; background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; border-radius: 1rem; margin-top: 2rem;">
+                <h3 style="font-size: 2rem; margin-bottom: 1rem;">Out of Free Improvements</h3>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.95;">
+                    Upgrade to Premium for unlimited prompt improvements plus access to 60+ expert prompts
+                </p>
+                <a href="pricing.html" class="btn btn-primary btn-large" style="background: white; color: #1e40af;">
+                    Upgrade Now - $4.99/month
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f9fafb; padding: 3rem 0;">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Pattern Recognition</h3>
+                    <p>Our tool identifies common problematic patterns like asking for completed work or being too vague.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✏️</div>
+                    <h3>Smart Reframing</h3>
+                    <p>We rewrite prompts to focus on understanding, guidance, and learning rather than just getting answers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Learning Focus</h3>
+                    <p>Every improvement emphasizes developing your critical thinking and genuine comprehension.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📚</span>
+                        <span class="logo-text">PromptScholar</span>
+                    </div>
+                    <p class="footer-description">Ethical AI study prompts for college students.</p>
+                    <p class="footer-copyright">© 2026 PromptScholar. All rights reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="library.html">Prompt Library</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let improvementsUsed = 0;
+        const maxFreeImprovements = 3;
+        let improvedPromptText = '';
+
+        function improvePrompt() {
+            const userPrompt = document.getElementById('userPrompt').value.trim();
+            
+            if (!userPrompt) {
+                alert('Please enter a prompt first!');
+                return;
+            }
+
+            if (improvementsUsed >= maxFreeImprovements) {
+                document.getElementById('upgradeCTA').style.display = 'block';
+                document.getElementById('upgradeCTA').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+
+            // Analyze the prompt and generate improvements
+            const analysis = analyzePrompt(userPrompt);
+            
+            // Show results
+            document.getElementById('originalPrompt').textContent = userPrompt;
+            document.getElementById('improvedPrompt').textContent = analysis.improved;
+            improvedPromptText = analysis.improved;
+            
+            // Show issues
+            const issuesHTML = `
+                <h4 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Issues Found:</h4>
+                <ul style="margin-left: 1.5rem; color: #78350f;">
+                    ${analysis.issues.map(issue => `<li>${issue}</li>`).join('')}
+                </ul>
+            `;
+            document.getElementById('issuesSection').innerHTML = issuesHTML;
+            
+            // Show benefits
+            const benefitsHTML = analysis.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+            document.getElementById('whyBetterList').innerHTML = benefitsHTML;
+            
+            // Show result section
+            document.getElementById('resultSection').style.display = 'block';
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+            
+            // Update counter
+            improvementsUsed++;
+            updateCounter();
+        }
+
+        function analyzePrompt(prompt) {
+            const lower = prompt.toLowerCase();
+            const issues = [];
+            const benefits = [];
+            let improved = prompt;
+
+            // Check for problematic patterns
+            if (lower.match(/write (my|an|a|the) (essay|paper|report)/)) {
+                issues.push("Asks for completed written work (plagiarism risk)");
+                benefits.push("Focuses on guidance and outlining, not generating completed work");
+                improved = improved.replace(/write (my|an|a|the) (essay|paper|report)/gi, 
+                    "help me develop my $2 by guiding me through the process");
+            }
+
+            if (lower.match(/do (my|this|the) (homework|assignment|problem)/)) {
+                issues.push("Requests direct completion of assignment");
+                benefits.push("Emphasizes understanding the approach, not just getting answers");
+                improved = improved.replace(/do (my|this|the) (homework|assignment|problem)/gi,
+                    "help me understand how to approach this $2");
+            }
+
+            if (lower.match(/give me (the answer|answers)/)) {
+                issues.push("Asks for answers without learning process");
+                benefits.push("Promotes step-by-step understanding");
+                improved = improved.replace(/give me (the answer|answers)/gi,
+                    "guide me through solving this");
+            }
+
+            if (lower.match(/solve (this|the|my)/)) {
+                issues.push("Requests direct solution");
+                benefits.push("Develops problem-solving skills through guided practice");
+                improved = improved.replace(/solve (this|the|my)/gi,
+                    "help me understand how to solve");
+            }
+
+            // Check if prompt is too vague
+            if (prompt.split(' ').length < 10) {
+                issues.push("Too vague - lacks specific context and structure");
+                benefits.push("Provides clear structure and learning objectives");
+                
+                // Add structure
+                improved = `I'm working on [${improved}]. Help me learn by:
+1. Breaking down the key concepts I need to understand
+2. Guiding me through the thinking process
+3. Asking me questions to check my understanding
+4. Providing examples that make this clearer
+
+Please guide me to learn and understand, not just complete the task.`;
+            }
+
+            // Check for lack of learning language
+            if (!lower.match(/help me|guide me|teach me|understand|learn|explain/)) {
+                issues.push("No emphasis on learning or understanding");
+                benefits.push("Reframes as a learning opportunity");
+                improved = `${improved}\n\nPlease help me understand the underlying concepts and develop my own thinking, rather than just providing the final answer.`;
+            }
+
+            // If no issues found, still provide improvement
+            if (issues.length === 0) {
+                issues.push("Prompt could be more specific about learning goals");
+                benefits.push("Adds explicit focus on comprehension and skill development");
+                improved = `${improved}\n\nPlease guide me through this by:
+1. Explaining key concepts in simple terms
+2. Showing me how to approach similar problems
+3. Asking questions to test my understanding
+4. Helping me develop genuine comprehension`;
+            }
+
+            // Always add ethical learning statement
+            benefits.push("Supports academic integrity by focusing on learning process");
+            benefits.push("Develops critical thinking skills that transfer to other contexts");
+
+            return { improved, issues, benefits };
+        }
+
+        function copyImprovedPrompt() {
+            navigator.clipboard.writeText(improvedPromptText).then(() => {
+                alert('✅ Improved prompt copied! Paste it into Claude, ChatGPT, or your preferred AI tool.');
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        function resetTool() {
+            document.getElementById('userPrompt').value = '';
+            document.getElementById('resultSection').style.display = 'none';
+            document.getElementById('userPrompt').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateCounter() {
+            const remaining = maxFreeImprovements - improvementsUsed;
+            const counterEl = document.getElementById('improvementsRemaining');
+            
+            if (remaining > 0) {
+                counterEl.textContent = `${remaining} free improvement${remaining === 1 ? '' : 's'} remaining`;
+                if (remaining === 1) {
+                    counterEl.style.background = '#fef3c7';
+                    counterEl.style.color = '#92400e';
+                }
+            } else {
+                counterEl.textContent = 'No free improvements remaining';
+                counterEl.style.background = '#fecaca';
+                counterEl.style.color = '#991b1b';
+            }
+        }
+    </script>
+</body>
+</html>
